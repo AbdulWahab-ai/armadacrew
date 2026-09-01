@@ -1,0 +1,14 @@
+services:
+  armadacrew:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      ARMADACREW_LLM_PROVIDER: mock
+      ARMADACREW_DB_PATH: /var/lib/armadacrew/armada.db
+      ARMADACREW_DATA_DIR: /app/data
+    volumes:
+      - armada-data:/var/lib/armadacrew
+
+volumes:
+  armada-data:
