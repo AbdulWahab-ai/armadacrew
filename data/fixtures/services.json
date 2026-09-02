@@ -1,0 +1,56 @@
+[
+  {
+    "id": "payments-api",
+    "name": "Payments API",
+    "aliases": ["payments", "billing-api", "charges"],
+    "team": "sre-payments",
+    "env": ["prod", "staging"],
+    "slo": {"p99_ms": 250, "error_rate": 1.0, "cpu_pct": 75},
+    "pager": "PAGER-PAY"
+  },
+  {
+    "id": "auth-service",
+    "name": "Auth Service",
+    "aliases": ["auth", "idp", "login"],
+    "team": "sre-identity",
+    "env": ["prod", "staging"],
+    "slo": {"p99_ms": 180, "error_rate": 0.8, "cpu_pct": 70},
+    "pager": "PAGER-AUTH"
+  },
+  {
+    "id": "checkout-api",
+    "name": "Checkout API",
+    "aliases": ["checkout"],
+    "team": "sre-commerce",
+    "env": ["prod"],
+    "slo": {"p99_ms": 300, "error_rate": 1.2, "cpu_pct": 75},
+    "pager": "PAGER-CHK"
+  },
+  {
+    "id": "notifications",
+    "name": "Notifications",
+    "aliases": ["emailer", "notify"],
+    "team": "sre-growth",
+    "env": ["prod"],
+    "slo": {"p99_ms": 400, "error_rate": 2.0, "cpu_pct": 80},
+    "pager": "PAGER-NTF"
+  },
+  {
+    "id": "edge-gateway",
+    "name": "Edge Gateway",
+    "aliases": ["edge", "gateway"],
+    "team": "sre-platform",
+    "env": ["prod"],
+    "slo": {"p99_ms": 80, "error_rate": 0.5, "cpu_pct": 65},
+    "pager": "PAGER-EDGE"
+  },
+  {
+    "id": "billing-api",
+    "name": "Billing API",
+    "aliases": ["billing"],
+    "team": "sre-payments",
+    "env": ["prod"],
+    "slo": {"p99_ms": 280, "error_rate": 1.0, "cpu_pct": 70},
+    "pager": "PAGER-BIL"
+  }
+]

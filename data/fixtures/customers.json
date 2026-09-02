@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cus_ada",
+    "name": "Ada Lovelace",
+    "email": "ada@analytical.engine",
+    "company": "Analytical Engines Ltd",
+    "plan": "enterprise",
+    "country": "GB",
+    "lifetime_usd": 18400,
+    "last_charge_usd": 720,
+    "duplicate_charge_usd": 720,
+    "payment_intent": "pi_ada_720",
+    "open_tickets": 1,
+    "notes": "Duplicate capture after payments-api retry storm. Eligible for refund with HITL."
+  },
+  {
+    "id": "cus_turing",
+    "name": "Alan Turing",
+    "email": "alan@bletchley.example",
+    "company": "Bletchley Computing",
+    "plan": "pro",
+    "country": "GB",
+    "lifetime_usd": 2400,
+    "last_charge_usd": 49,
+    "duplicate_charge_usd": 0,
+    "payment_intent": "pi_turing_49",
+    "open_tickets": 0,
+    "notes": "Stable subscriber."
+  },
+  {
+    "id": "cus_hopper",
+    "name": "Grace Hopper",
+    "email": "grace@hopperlabs.example",
+    "company": "Hopper Labs",
+    "plan": "enterprise",
+    "country": "US",
+    "lifetime_usd": 22100,
+    "last_charge_usd": 199,
+    "duplicate_charge_usd": 0,
+    "payment_intent": "pi_hopper_199",
+    "open_tickets": 0,
+    "notes": "Asked about SLA credits after auth outage."
+  },
+  {
+    "id": "cus_knuth",
+    "name": "Donald Knuth",
+    "email": "don@artofprogramming.example",
+    "company": "Art of Programming",
+    "plan": "pro",
+    "country": "US",
+    "lifetime_usd": 960,
+    "last_charge_usd": 49,
+    "duplicate_charge_usd": 49,
+    "payment_intent": "pi_knuth_49",
+    "open_tickets": 0,
+    "notes": "Small duplicate under HITL threshold."
+  },
+  {
+    "id": "cus_lamport",
+    "name": "Leslie Lamport",
+    "email": "leslie@clocks.example",
+    "company": "Distributed Clocks",
+    "plan": "free",
+    "country": "US",
+    "lifetime_usd": 0,
+    "last_charge_usd": 0,
+    "duplicate_charge_usd": 0,
+    "payment_intent": null,
+    "open_tickets": 0,
+    "notes": "Free tier, no charges."
+  }
+]

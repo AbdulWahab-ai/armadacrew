@@ -1,0 +1,44 @@
+[
+  {
+    "id": "inc-pay-latency",
+    "service": "payments-api",
+    "severity": "sev2",
+    "status": "investigating",
+    "title": "p99 latency spike on payments-api prod",
+    "started_at": "2026-09-10T18:40:00+00:00",
+    "summary": "Retry storm after Stripe 429s. Duplicate captures possible.",
+    "pager_key": "inc-payments-api"
+  },
+  {
+    "id": "inc-auth-yesterday",
+    "service": "auth-service",
+    "severity": "sev1",
+    "status": "resolved",
+    "title": "Auth outage after JWKS rotation",
+    "started_at": "2026-09-10T09:12:00+00:00",
+    "resolved_at": "2026-09-10T09:30:00+00:00",
+    "summary": "Stale kid legacy-2023 served for 18 minutes. Login failures platform-wide.",
+    "pager_key": "inc-auth-yesterday",
+    "impact": "Enterprise logins failed. SLA credit eligible."
+  },
+  {
+    "id": "inc-cache-stampede",
+    "service": "auth-service",
+    "severity": "sev3",
+    "status": "resolved",
+    "title": "Authz cache stampede",
+    "started_at": "2026-09-08T14:00:00+00:00",
+    "summary": "TTL misconfig, coalescing disabled.",
+    "pager_key": "inc-cache"
+  },
+  {
+    "id": "inc-db-sat",
+    "service": "checkout-api",
+    "severity": "sev2",
+    "status": "open",
+    "title": "checkout-db saturation",
+    "started_at": "2026-09-11T00:10:00+00:00",
+    "summary": "Lock waits on charges table.",
+    "pager_key": "inc-checkout-db"
+  }
+]
