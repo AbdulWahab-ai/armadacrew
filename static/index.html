@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ArmadaCrew — Mission Control</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="mark">AC</span>
+        <div>
+          <h1>ArmadaCrew</h1>
+          <p>Operations copilot · graph runtime · HITL</p>
+        </div>
+      </div>
+      <div class="health" id="health">connecting…</div>
+    </header>
+
+    <main class="grid">
+      <section class="panel left">
+        <h2>New run</h2>
+        <form id="run-form">
+          <label for="task">Task</label>
+          <textarea id="task" name="task" rows="5" required>API p99 latency spiked on payments-api in prod</textarea>
+          <label for="mode">Mode</label>
+          <select id="mode" name="mode">
+            <option value="auto">auto</option>
+            <option value="incident">incident</option>
+            <option value="customer_ops">customer_ops</option>
+          </select>
+          <button type="submit" id="launch">Launch graph</button>
+        </form>
+        <h3>Sample tasks</h3>
+        <div id="samples" class="samples"></div>
+        <h3>Recent runs</h3>
+        <ul id="run-list" class="run-list"></ul>
+      </section>
+
+      <section class="panel center">
+        <div class="center-head">
+          <h2>Node timeline</h2>
+          <span id="run-status" class="pill idle">idle</span>
+        </div>
+        <ol id="timeline" class="timeline"></ol>
+      </section>
+
+      <section class="panel right">
+        <h2>Inspector</h2>
+        <div id="approval" class="approval hidden">
+          <p id="approval-reason"></p>
+          <textarea id="approval-comment" rows="2" placeholder="Operator comment"></textarea>
+          <div class="row">
+            <button id="approve" class="ok" type="button">Approve</button>
+            <button id="reject" class="danger" type="button">Reject</button>
+          </div>
+        </div>
+        <h3>Artifacts</h3>
+        <div id="artifacts" class="artifacts"></div>
+        <h3>State</h3>
+        <pre id="state-json" class="json">{}</pre>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
