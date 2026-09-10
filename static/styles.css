@@ -11,7 +11,7 @@
   --ok: #7dffb3;
   --idle: #4d6276;
   --mono: "IBM Plex Mono", "SF Mono", ui-monospace, monospace;
-  --sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --sans: "DM Sans", "Segoe UI", sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -101,6 +101,15 @@ button.danger { background: var(--danger); color: #1a0408; }
 .row { display: flex; gap: 8px; margin-top: 8px; }
 .row button { flex: 1; }
 .hidden { display: none; }
+.hint { color: var(--muted); font-size: 11px; font-family: var(--mono); margin: 8px 0 0; }
+.mini {
+  background: transparent; color: var(--muted); border: 1px solid var(--line);
+  padding: 2px 8px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em;
+  float: right; cursor: pointer;
+}
+.timeline li.empty-li { border-left: 0; color: var(--muted); padding-left: 0; margin-left: 0; }
+.timeline li.empty-li::before { display: none; }
+h3 { overflow: hidden; }
 
 @media (max-width: 1100px) {
   .grid { grid-template-columns: 1fr; }

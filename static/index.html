@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ArmadaCrew — Mission Control</title>
+    <title>ArmadaCrew</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23070b10'/%3E%3Cpath d='M8 22 L16 8 L24 22 Z' fill='none' stroke='%233ee0c5' stroke-width='2'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="/static/styles.css" />
   </head>
   <body>
@@ -31,6 +35,7 @@
             <option value="customer_ops">customer_ops</option>
           </select>
           <button type="submit" id="launch">Launch graph</button>
+          <p class="hint">⌘/Ctrl + Enter</p>
         </form>
         <h3>Sample tasks</h3>
         <div id="samples" class="samples"></div>
@@ -43,7 +48,7 @@
           <h2>Node timeline</h2>
           <span id="run-status" class="pill idle">idle</span>
         </div>
-        <ol id="timeline" class="timeline"></ol>
+        <ol id="timeline" class="timeline"><li class="empty-li">No events yet. Launch a run.</li></ol>
       </section>
 
       <section class="panel right">
@@ -58,7 +63,7 @@
         </div>
         <h3>Artifacts</h3>
         <div id="artifacts" class="artifacts"></div>
-        <h3>State</h3>
+        <h3>State <button type="button" id="copy-state" class="mini">Copy JSON</button></h3>
         <pre id="state-json" class="json">{}</pre>
       </section>
     </main>

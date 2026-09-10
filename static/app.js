@@ -147,6 +147,21 @@ document.getElementById("run-form").addEventListener("submit", (ev) => {
   ev.preventDefault();
   launch(document.getElementById("task").value, document.getElementById("mode").value);
 });
+document.getElementById("task").addEventListener("keydown", (ev) => {
+  if ((ev.metaKey || ev.ctrlKey) && ev.key === "Enter") {
+    ev.preventDefault();
+    document.getElementById("run-form").requestSubmit();
+  }
+});
+document.getElementById("copy-state").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(stateJson.textContent);
+    document.getElementById("copy-state").textContent = "Copied";
+    setTimeout(() => { document.getElementById("copy-state").textContent = "Copy JSON"; }, 1200);
+  } catch {
+    /* ignore */
+  }
+});
 document.getElementById("approve").onclick = () => resume(true);
 document.getElementById("reject").onclick = () => resume(false);
 
